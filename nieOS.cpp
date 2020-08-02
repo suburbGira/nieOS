@@ -21,7 +21,7 @@ void logon()
         std::cin >> pass;
     }
     else {
-        exit;
+        std::exit; // hopefully ends the program
     }
     if (pass == "nie")
     {
@@ -29,9 +29,7 @@ void logon()
     }
     else {
         std::cout << "Wrong username/password";
-        std::cin.clear(); // reset any error flags
-        std::cin.get(); // get one more char from the user
-        exit;
+        throw std::exception(); // makes sure that the program was ended
     }
 }
 
@@ -40,23 +38,25 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
     std::this_thread::sleep_for(std::chrono::milliseconds(time));
 }
 
-void desktop()
-{
-    std::cout << "Available applications: \n";
-    std::cout << "None!";
-    std::cout << "\nThe system will now exit.";
-}
 
 int main()
 {
-    std::cout << "nieOS Build 2";
+    std::cout << "nieOS Build 4";
     sleep(2000);
     std::cout << "\n\n";
     logon();
     sleep(2000);
     system("CLS");
-    std::cout << "Welcome to nieOS";
-    desktop();
+    std::cout << "Welcome to nieOS"; // logon phase ended
+
+
+    std::string command;
+    std::cout << "N:/ \n";
+    std::cin >> command;
+    if (command == "help")
+    {
+        std::cout << "Available commands:\n help\n";
+    }
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
