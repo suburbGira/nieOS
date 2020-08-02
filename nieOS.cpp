@@ -5,10 +5,8 @@
 #include <string>
 #include <thread>
 #include <chrono>
-#include <limits>
-#include <stdio.h>
 
-void logon()
+void logon() // logon script
 {
     std::string user;
     std::string pass;
@@ -41,14 +39,13 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
 
 int main()
 {
-    std::cout << "nieOS Build 7";
+    std::cout << "nieOS Build 10";
     sleep(2000);
     std::cout << "\n\n";
     logon();
     sleep(2000);
     system("CLS");
-    std::cout << "Welcome to nieOS"; // logon phase ended
-
+    std::cout << "Welcome to nieOS\n"; // logon phase ended
 
     std::string command;
     while (true) {
@@ -56,13 +53,42 @@ int main()
         std::cin >> command;
         if (command == "help")
         {
-            std::cout << "Available commands:\n help    exit\n";
+            std::cout << "Available commands:\n help    exit    nie     calc\n";
         }
-        else if (command == "exit") {
+        else if (command == "exit") { // exits the program
             throw std::exception();
         }
+        else if (command == "nie") {
+            std::cout << R"(
+           /$$          
+          |__/          
+ /$$$$$$$  /$$  /$$$$$$ 
+| $$__  $$| $$ /$$__  $$
+| $$  \ $$| $$| $$$$$$$$
+| $$  | $$| $$| $$_____/
+| $$  | $$| $$|  $$$$$$$
+|__/  |__/|__/ \_______/
+)" << '\n';
+        }
+        else if (command == "calc") {
+            int num1; // defining number variables
+            int num2;
+            std::string operation;
+            std::cout << "Enter integer 1: ";
+            std::cin >> num1;
+            std::cout << "Enter integer 2: ";
+            std::cin >> num2;
+            std::cout << "What operation would you like to perform (symbols only)? ";
+            std::cin >> operation;
+            if (operation == "+") {
+                std::cout << "The result is " << num1 + num2;
+            }
+            else {
+                std::cout << "Invalid input or operation not implemented yet.";
+            }
+        }
         else {
-            std::cout << "Unknown command.\n";
+            std::cout << "Unknown command. Type help for a list of commands\n";
         }
     }
 }
