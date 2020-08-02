@@ -39,7 +39,8 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
 
 int main()
 {
-    std::cout << "nieOS Build 23";
+
+    std::cout << "nieOS Build 30";
     sleep(2300);
     std::cout << "\nLoading logon window...";
     sleep(100);
@@ -60,7 +61,7 @@ int main()
         std::cin >> command;
         if (command == "help")
         {
-            std::cout << "Available commands:\n help    exit    nie     calc    dir     cd    cls\n";
+            std::cout << "Available commands:\n help    exit    nie     calc    dir     cd    cls   edit\n";
         }
         else if (command == "exit") { // exits the program
             throw std::exception();
@@ -78,8 +79,8 @@ int main()
 )" << '\n';
         }
         else if (command == "calc") {
-            int num1; // defining number variables
-            int num2;
+            int num1{ 0 }; // defining number variables
+            int num2{ 0 };
             std::string operation;
             std::cout << "Enter integer 1: ";
             std::cin >> num1;
@@ -113,11 +114,13 @@ int main()
             sleep(300);
             std::cout << "17:00  02.08.2020        700K    superhack.prg\n";
             sleep(100);
+            std::cout << "20:16  02.08.2020          5M    CDplay.prg\n";
+            sleep(274);
             std::cout << "15:59  02.08.2020         10M    nieOS.cpp\n";
             sleep(400);
             std::cout << "17:24  02.08.2020          7K    about.txt\n";
             sleep(500);
-            std::cout << "              3 FILES\n              2 FOLDERS\n";
+            std::cout << "              4 FILES\n              2 FOLDERS\n";
         }
         else if (command == "cd/OS") {
             std::cout << "Access denied.";
@@ -140,7 +143,7 @@ int main()
             sleep(10000);
             std::cout << "5y573m 15 n0w h4xx0r3d";
         }
-        else if (command == "about.txt") {
+        else if (command == "edit/about.txt") {
             std::cout << R"(
 -------------nieOS EDITOR - about.txt (read only)--------------------
 | Hello, I made this program a day after learning C++, for fun.     |
@@ -151,6 +154,45 @@ int main()
         }
         else if (command == "cls") {
             system("CLS");
+        }
+        else if (command == "edit") {
+            std::cout << R"(
+----------------------nieOS EDITOR - no file-------------------------
+| To open a file, use edit/(filename)                               |
+| New files cannot be created because the volume is write protected |
+|                                                                   |
+|___________________________________________________________________|
+)";
+        }
+        else if (command == "CDplay.prg") {
+        std::cout << "There is no CD inserted.";
+        }
+        else if (command == "edit/superhack.prg") {
+        std::cout << R"(
+-------------nieOS EDITOR - superhack.prg (read only)----------------
+| This file is a compiled binary file and cannot be opened.         |
+|                                                                   |
+|                                                                   |
+|___________________________________________________________________|
+)";
+        }
+        else if (command == "edit/CDplay.prg") {
+        std::cout << R"(
+----------------nieOS EDITOR - CDplay.prg (read only)----------------
+| This file is a compiled binary file and cannot be opened.         |
+|                                                                   |
+|                                                                   |
+|___________________________________________________________________|
+)";
+        }
+        else if (command == "edit/nieOS.cpp") {
+        std::cout << R"(
+-----------------nieOS EDITOR - nieOS.cpp (read only)----------------
+| Support for .CPP files will be implemented in the future.         |
+|                                                                   |
+|                                                                   |
+|___________________________________________________________________|
+)";
         }
         else {
             std::cout << "Unknown command. Type help for a list of commands\n";
