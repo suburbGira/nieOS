@@ -39,6 +39,7 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
 
 int main()
 {
+
     std::cout << "nieOS Build 30";
     sleep(2300);
     std::cout << "\nLoading logon window...";
@@ -136,9 +137,9 @@ int main()
         else if (command == "superhack.prg") {
             std::string discard; //this variable will be discarded
             system("CLS");
-            std::cout << "5up3r h4ck3r pr06r4m 1n171473d\n\nWh47 d0 y0u w4n7 70 h4xx";
+            std::cout << "5up3r h4ck3r pr06r4m 1n171473d\n\nWh47 d0 y0u w4n7 70 h4xx? ";
             std::cin >> discard;
-            std::cout << "h4xx1n6 1n pr06r355";
+            std::cout << "h4xx1n6 1n pr06r355\n";
             sleep(10000);
             std::cout << "5y573m 15 n0w h4xx0r3d";
         }
