@@ -60,7 +60,7 @@ int main()
         std::cin >> command;
         if (command == "help")
         {
-            std::cout << "Available commands:\n help    exit    nie     calc    dir     cd    cls\n";
+            std::cout << "Available commands:\n help    exit    nie     calc    dir    ls     cd    cls\n";
         }
         else if (command == "exit") { // exits the program
             throw std::exception();
@@ -105,6 +105,21 @@ int main()
             }
         }
         else if (command == "dir") {
+            std::cout << "Listing directory of N:/\n";
+            sleep(200);
+            std::cout << "15:55  05.08.2020    <FOLDER>    OS\n";
+            sleep(200);
+            std::cout << "14:45  05.08.2020    <FOLDER>    DOCUMENTS\n";
+            sleep(300);
+            std::cout << "17:00  05.08.2020        700K    superhack.prg\n";
+            sleep(100);
+            std::cout << "15:59  05.08.2020         10M    nieOS.cpp\n";
+            sleep(400);
+            std::cout << "17:24  05.08.2020          7K    about.txt\n";
+            sleep(500);
+            std::cout << "              3 FILES\n              2 FOLDERS\n";
+        }
+        else if (command == "ls") {
             std::cout << "Listing directory of N:/\n";
             sleep(200);
             std::cout << "15:55  05.08.2020    <FOLDER>    OS\n";
