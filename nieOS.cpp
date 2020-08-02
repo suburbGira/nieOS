@@ -83,6 +83,16 @@ int main()
             if (operation == "+") {
                 std::cout << "The result is " << num1 + num2;
             }
+            else if (operation == "-") {
+                std::cout << "The result is " << num1 - num2;
+            }
+            else if (operation == "*") {
+                std::cout << "The result is " << num1 * num2;
+            }
+            else if (operation == "/")
+                std::cout << "The result is " << num1 / num2;
+            else if (operation == ":") // adds support for second way of writing division
+                std::cout << "The result is " << num1 / num2;
             else {
                 std::cout << "Invalid input or operation not implemented yet.";
             }
