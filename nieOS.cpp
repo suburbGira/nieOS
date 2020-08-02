@@ -138,7 +138,7 @@ int main()
             std::cin >> discard;
             std::cout << "h4xx1n6 1n pr06r355";
             sleep(10000);
-            std::cout << "5y573m 15 n0w h4xx0r3d";
+            std::cout << "\n5y573m 15 n0w h4xx0r3d";
         }
         else if (command == "about.txt") {
             std::cout << R"(
