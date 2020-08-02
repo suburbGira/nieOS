@@ -39,7 +39,7 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
 
 int main()
 {
-    std::cout << "nieOS Build 22";
+    std::cout << "nieOS Build 23";
     sleep(2300);
     std::cout << "\nLoading logon window...";
     sleep(100);
@@ -107,15 +107,15 @@ int main()
         else if (command == "dir") {
             std::cout << "Listing directory of N:/\n";
             sleep(200);
-            std::cout << "15:55  05.08.2020    <FOLDER>    OS\n";
+            std::cout << "15:55  02.08.2020    <FOLDER>    OS\n";
             sleep(200);
-            std::cout << "14:45  05.08.2020    <FOLDER>    DOCUMENTS\n";
+            std::cout << "14:45  02.08.2020    <FOLDER>    DOCUMENTS\n";
             sleep(300);
-            std::cout << "17:00  05.08.2020        700K    superhack.prg\n";
+            std::cout << "17:00  02.08.2020        700K    superhack.prg\n";
             sleep(100);
-            std::cout << "15:59  05.08.2020         10M    nieOS.cpp\n";
+            std::cout << "15:59  02.08.2020         10M    nieOS.cpp\n";
             sleep(400);
-            std::cout << "17:24  05.08.2020          7K    about.txt\n";
+            std::cout << "17:24  02.08.2020          7K    about.txt\n";
             sleep(500);
             std::cout << "              3 FILES\n              2 FOLDERS\n";
         }
