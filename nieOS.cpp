@@ -41,7 +41,7 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
 
 int main()
 {
-    std::cout << "nieOS Build 4";
+    std::cout << "nieOS Build 7";
     sleep(2000);
     std::cout << "\n\n";
     logon();
@@ -51,11 +51,19 @@ int main()
 
 
     std::string command;
-    std::cout << "N:/ \n";
-    std::cin >> command;
-    if (command == "help")
-    {
-        std::cout << "Available commands:\n help\n";
+    while (true) {
+        std::cout << "\nN:/";
+        std::cin >> command;
+        if (command == "help")
+        {
+            std::cout << "Available commands:\n help    exit\n";
+        }
+        else if (command == "exit") {
+            throw std::exception();
+        }
+        else {
+            std::cout << "Unknown command.\n";
+        }
     }
 }
 
