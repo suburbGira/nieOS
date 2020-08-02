@@ -40,14 +40,23 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
     std::this_thread::sleep_for(std::chrono::milliseconds(time));
 }
 
+void desktop()
+{
+    std::cout << "Available applications: \n";
+    std::cout << "None!";
+    std::cout << "\nThe system will now exit.";
+}
+
 int main()
 {
-    std::cout << "nieOS Build 1";
+    std::cout << "nieOS Build 2";
     sleep(2000);
     std::cout << "\n\n";
     logon();
     sleep(2000);
+    system("CLS");
     std::cout << "Welcome to nieOS";
+    desktop();
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
