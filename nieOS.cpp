@@ -39,14 +39,19 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
 
 int main()
 {
-    std::cout << "nieOS Build 16";
+    std::cout << "nieOS Build 18";
     sleep(2300);
-    std::cout << "";
-    sleep(2000);
+    std::cout << "\nLoading logon window...";
+    sleep(100);
+    std::cout << "\nLoading command interpreter...";
+    sleep(500);
+    std::cout << "\nLoading debugger...";
+    sleep(1700);
     std::cout << "\n\n";
     logon();
     sleep(2000);
     system("CLS");
+    sleep(1500);
     std::cout << "Welcome to nieOS\n"; // logon phase ended
 
     std::string command;
@@ -105,10 +110,12 @@ int main()
             std::cout << "15:55  05.08.2020    <FOLDER>    OS\n";
             sleep(200);
             std::cout << "14:45  05.08.2020    <FOLDER>    DOCUMENTS\n";
+            sleep(300);
+            std::cout << "17:00  05.08.2020        700K    superhack.prg\n";
             sleep(100);
             std::cout << "15:59  05.08.2020         10M    nieOS.cpp\n";
             sleep(500);
-            std::cout << "              1 FILE\n              2 FOLDERS\n";
+            std::cout << "              2 FILES\n              2 FOLDERS\n";
         }
         else if (command == "cd/OS") {
             std::cout << "Access denied.";
@@ -118,6 +125,9 @@ int main()
         }
         else if (command == "cd") {
             std::cout << "SYNTAX: cd/(folder name)";
+        }
+        else if (command == "nieOS.cpp") {
+            std::cout << "This program cannot be run under nieOS.";
         }
         else {
             std::cout << "Unknown command. Type help for a list of commands\n";
