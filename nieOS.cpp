@@ -39,7 +39,9 @@ void sleep(int time) // Definicja łatwiejszej metody sleep()
 
 int main()
 {
-    std::cout << "nieOS Build 11";
+    std::cout << "nieOS Build 16";
+    sleep(2300);
+    std::cout << "";
     sleep(2000);
     std::cout << "\n\n";
     logon();
@@ -52,8 +54,8 @@ int main()
         std::cout << "\nN:/";
         std::cin >> command;
         if (command == "help")
-        { 
-            std::cout << "Available commands:\n help    exit    nie     calc\n";
+        {
+            std::cout << "Available commands:\n help    exit    nie     calc    dir     cd\n";
         }
         else if (command == "exit") { // exits the program
             throw std::exception();
@@ -96,6 +98,26 @@ int main()
             else {
                 std::cout << "Invalid input or operation not implemented yet.";
             }
+        }
+        else if (command == "dir") {
+            std::cout << "Listing directory of N:/\n";
+            sleep(200);
+            std::cout << "15:55  05.08.2020    <FOLDER>    OS\n";
+            sleep(200);
+            std::cout << "14:45  05.08.2020    <FOLDER>    DOCUMENTS\n";
+            sleep(100);
+            std::cout << "15:59  05.08.2020         10M    nieOS.cpp\n";
+            sleep(500);
+            std::cout << "              1 FILE\n              2 FOLDERS\n";
+        }
+        else if (command == "cd/OS") {
+            std::cout << "Access denied.";
+        }
+        else if (command == "cd/DOCUMENTS") {
+            std::cout << "ERROR: Could not locate folder. Perhaps it no longer exists?";
+        }
+        else if (command == "cd") {
+            std::cout << "SYNTAX: cd/(folder name)";
         }
         else {
             std::cout << "Unknown command. Type help for a list of commands\n";
