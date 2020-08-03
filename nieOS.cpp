@@ -122,6 +122,23 @@ int main()
             sleep(500);
             std::cout << "              4 FILES\n              2 FOLDERS\n";
         }
+        else if (command == "ls") {
+            std::cout << "Listing directory of N:/\n";
+            sleep(200);
+            std::cout << "15:55  02.08.2020    <FOLDER>    OS\n";
+            sleep(200);
+            std::cout << "14:45  02.08.2020    <FOLDER>    DOCUMENTS\n";
+            sleep(300);
+            std::cout << "17:00  02.08.2020        700K    superhack.prg\n";
+            sleep(100);
+            std::cout << "20:16  02.08.2020          5M    CDplay.prg\n";
+            sleep(274);
+            std::cout << "15:59  02.08.2020         10M    nieOS.cpp\n";
+            sleep(400);
+            std::cout << "17:24  02.08.2020          7K    about.txt\n";
+            sleep(500);
+            std::cout << "              4 FILES\n              2 FOLDERS\n";
+        }
         else if (command == "cd/OS") {
             std::cout << "Access denied.";
         }
